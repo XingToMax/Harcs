@@ -23,4 +23,13 @@ public class ConstantMessage {
     public static final String RC_FLUSHALL = "flushall";
     public static final String RC_ECHO = "echo";
     public static final String RC_SELECT = "select";
+
+    public static final String ROLE_MASTER = "master";
+    public static final String ROLE_SLAVE = "slave";
+
+    public static final String SP_NX = "nx";
+    public static final String SP_EX = "ex";
+    public static final String SP_PX = "px";
+    public static final String SP_XX = "xx";
+
 }
