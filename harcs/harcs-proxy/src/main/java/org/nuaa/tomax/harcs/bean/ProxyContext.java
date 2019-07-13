@@ -1,9 +1,9 @@
-package org.nuaa.tomax.harcs;
+package org.nuaa.tomax.harcs.bean;
 
 import lombok.Data;
 
 /**
- * @Name: org.nuaa.tomax.harcs.ProxyContext
+ * @Name: org.nuaa.tomax.harcs.bean.ProxyContext
  * @Description: TODO
  * @Author: tomax
  * @Date: 2019-07-01 20:43
