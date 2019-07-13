@@ -20,7 +20,7 @@ public class RedisCommandHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         RedisMessage redisMessage = (RedisMessage) msg;
 
-        RedisMessageUtil.printRedisMessage(redisMessage);
+//        RedisMessageUtil.printRedisMessage(redisMessage);
         RedisMessage reply = RedisMessageHandler.dispatchHandle(redisMessage, new RedisMessageHandleContext());
 
         ctx.writeAndFlush(reply);
