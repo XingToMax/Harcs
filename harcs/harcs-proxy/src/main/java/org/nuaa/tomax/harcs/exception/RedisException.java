@@ -1,4 +1,4 @@
-package exception;
+package org.nuaa.tomax.harcs.exception;
 
 /**
  * @Name: RedisException
