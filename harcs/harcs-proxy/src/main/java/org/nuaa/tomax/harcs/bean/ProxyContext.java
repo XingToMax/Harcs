@@ -17,6 +17,8 @@ public class ProxyContext {
 
     private int port;
 
+    public static int monitorPort;
+
     public ProxyContext(int port) {
         this.port = port;
     }
