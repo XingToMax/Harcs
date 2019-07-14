@@ -1,6 +1,7 @@
 package org.nuaa.tomax.harcs.bean;
 
 import lombok.Data;
+import org.nuaa.tomax.harcs.envirnoment.RedisSystem;
 
 /**
  * @Name: org.nuaa.tomax.harcs.bean.ProxyContext
@@ -11,6 +12,9 @@ import lombok.Data;
  */
 @Data
 public class ProxyContext {
+    private RedisSystem redisSystem;
+    private ProxyInfo proxyInfo;
+
     private int port;
 
     public ProxyContext(int port) {

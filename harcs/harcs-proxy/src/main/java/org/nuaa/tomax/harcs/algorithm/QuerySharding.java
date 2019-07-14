@@ -1,6 +1,6 @@
 package org.nuaa.tomax.harcs.algorithm;
 
-import redis.clients.jedis.Jedis;
+import org.nuaa.tomax.harcs.bean.RedisNode;
 
 /**
  * @Name: QuerySharding
@@ -10,5 +10,5 @@ import redis.clients.jedis.Jedis;
  * @Version: 1.0
  */
 public interface QuerySharding {
-    Jedis sharding(String key);
+    RedisNode sharding(String key);
 }

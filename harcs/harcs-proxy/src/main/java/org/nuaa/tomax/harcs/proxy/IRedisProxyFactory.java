@@ -12,7 +12,11 @@ import redis.clients.jedis.Jedis;
 public interface IRedisProxyFactory {
     Jedis getMasterNode();
 
-    Jedis chooseWorkNode();
+    Jedis chooseWorkNode(String key);
+
+    void modifyMaster();
+
+    void updateWorkNode();
 
     static IRedisProxyFactory get() {
         return TempRedisProxyFactory.getInstance();

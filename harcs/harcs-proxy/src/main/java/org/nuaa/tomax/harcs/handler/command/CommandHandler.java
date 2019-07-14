@@ -208,7 +208,7 @@ public interface CommandHandler {
                         "ERR wrong number of arguments for 'get' command"
                 );
             }
-            String msg = IRedisProxyFactory.get().chooseWorkNode().pipelined().get(commands.get(1)).get();
+            String msg = IRedisProxyFactory.get().chooseWorkNode(commands.get(1)).get(commands.get(1));
 
             if (msg == null) {
                 msg = ConstantMessage.RP_NIL;
