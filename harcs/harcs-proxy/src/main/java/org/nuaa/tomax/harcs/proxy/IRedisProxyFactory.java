@@ -1,5 +1,6 @@
 package org.nuaa.tomax.harcs.proxy;
 
+import org.nuaa.tomax.harcs.client.RedisClient;
 import redis.clients.jedis.Jedis;
 
 /**
@@ -14,11 +15,15 @@ public interface IRedisProxyFactory {
 
     Jedis chooseWorkNode(String key);
 
+    RedisClient getMasterClient();
+
+    RedisClient chooseWorkClient(String key);
+
     void modifyMaster();
 
     void updateWorkNode();
 
     static IRedisProxyFactory get() {
-        return TempRedisProxyFactory.getInstance();
+        return CoreRedisProxyFactory.getInstance();
     }
 }

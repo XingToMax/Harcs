@@ -1,5 +1,6 @@
 package org.nuaa.tomax.harcs.proxy;
 
+import org.nuaa.tomax.harcs.client.RedisClient;
 import org.nuaa.tomax.harcs.envirnoment.RedisSystem;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -55,5 +56,15 @@ public class TempRedisProxyFactory implements IRedisProxyFactory {
     @Override
     public void updateWorkNode() {
         // TODO
+    }
+
+    @Override
+    public RedisClient getMasterClient() {
+        return null;
+    }
+
+    @Override
+    public RedisClient chooseWorkClient(String key) {
+        return null;
     }
 }
