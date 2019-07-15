@@ -58,5 +58,17 @@ public class RedisMessageUtil {
         return list;
     }
 
+    public static String extractMsg(RedisMessage redisMessage) {
+        if (redisMessage instanceof SimpleStringRedisMessage) {
+            return ((SimpleStringRedisMessage) redisMessage).content();
+        } else if (redisMessage instanceof FullBulkStringRedisMessage) {
+            return extractStringFromFullBulkString((FullBulkStringRedisMessage) redisMessage);
+        } else if (redisMessage instanceof IntegerRedisMessage) {
+            return String.valueOf(((IntegerRedisMessage) redisMessage).value());
+        } else {
+            return "(nil)";
+        }
+    }
+
 
 }
