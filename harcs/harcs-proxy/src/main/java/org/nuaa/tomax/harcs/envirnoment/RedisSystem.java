@@ -27,10 +27,10 @@ public class RedisSystem {
     public static final Object DEAD_NODES_LOCK = new Object();
 
     static {
-        master = new RedisNode("127.0.0.1", 6379);
+//        master = new RedisNode("127.0.0.1", 6379);
         aliveNodes = new LinkedList<>();
 
-        aliveNodes.add(master);
+//        aliveNodes.add(master);
 
         deadNodes = new LinkedList<>();
     }
