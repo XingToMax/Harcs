@@ -1,5 +1,6 @@
 package org.nuaa.tomax.harcs.handler;
 
+import io.netty.util.ReferenceCountUtil;
 import org.nuaa.tomax.harcs.bean.RedisMessageHandleContext;
 import org.nuaa.tomax.harcs.common.RedisMessageUtil;
 import io.netty.channel.Channel;
@@ -24,7 +25,6 @@ public class RedisCommandHandler extends ChannelInboundHandlerAdapter {
         RedisMessage reply = RedisMessageHandler.dispatchHandle(redisMessage, new RedisMessageHandleContext());
 
         ctx.writeAndFlush(reply);
-
     }
 
     @Override

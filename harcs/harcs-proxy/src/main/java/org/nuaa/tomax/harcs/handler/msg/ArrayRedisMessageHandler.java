@@ -7,6 +7,7 @@ import org.nuaa.tomax.harcs.bean.RedisMessageHandleContext;
 import io.netty.handler.codec.redis.RedisMessage;
 import org.nuaa.tomax.harcs.common.CommandContext;
 import org.nuaa.tomax.harcs.common.ConstantMessage;
+import org.nuaa.tomax.harcs.common.LogFactory;
 import org.nuaa.tomax.harcs.common.RedisMessageUtil;
 import org.nuaa.tomax.harcs.handler.command.CommandHandler;
 
@@ -44,11 +45,11 @@ public class ArrayRedisMessageHandler implements RedisMessageHandler {
         if (commandsList.size() == 0) {
             return new ErrorRedisMessage(ConstantMessage.RP_NIL);
         }
-
-        if (!CommandHandler.commandHandleMap.containsKey(commandsList.get(0))) {
+        String command = commandsList.get(0).toLowerCase();
+        if (!CommandHandler.commandHandleMap.containsKey(command)) {
             return new ErrorRedisMessage("ERR unknown command `" + commandsList.get(0) + "` with args beginning with:");
         }
 
-        return CommandHandler.commandHandleMap.get(commandsList.get(0)).handle(commandsList, new CommandContext());
+        return CommandHandler.commandHandleMap.get(command).handle(commandsList, new CommandContext());
     }
 }
