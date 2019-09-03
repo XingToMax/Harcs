@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><plist version="1.0">
+	<dict>
+		<key>items</key>
+		<array>
+			<dict>
+				<key>assets</key>
+				<array>
+					<dict>
+						<key>kind</key>
+						<string>software-package</string>
+						<key>url</key>
+						<string>DailyBuild_rdm_4.2.2.49_iphone_alpha.ipa</string>
+					</dict>
+					<dict>
+						<key>kind</key>
+						<string>display-image</string>
+						<key>needs-shine</key>
+						<true/>
+						<key>url</key>
+						<string>https://rdm-ci-1258344701.cos.ap-guangzhou.myqcloud.com/2019-08-07/3731/754/DailyBuild_rdm_4.2.2.49_iphone_alpha.ipa?q-sign-algorithm=sha1&q-ak=AKIDpo7MgB0jKsEQOQSEsI3qKSajvXUFwNHP0XJzmxtrse9I0tO9liVrBhzqhA9sNupE&q-sign-time=1567492494;1567496094&q-key-time=1567492494;1567496094&q-header-list=&q-url-param-list=&q-signature=705cd22f703b616ab212c8c86e707862f8470fa5&x-cos-security-token=9ekJYwvYgOErzCJ7lr9aQXuhc6YG1Tdtcaec1f961ef78d1e11bdffe3df1f002dsn0NK8TQmZCWkQRnIeT0bpSQWLYgjsDIakn4eGi1CXFZwwLPffVR90Qt3Na1exbSh3P5eu6yN_6dFkjt4Fs813HN4iaTRkDoo-MB7RCeILvaVhRp_soxWixxZljd9_BAdppMkLKyHyUP5_W9zj8_IvOpWgifJtV8K_7LzteRYaw</string>
+					</dict>
+				</array>
+				<key>metadata</key>
+				<dict>
+					<key>bundle-identifier</key>
+					<string>com.tencent.rdm</string>
+					<key>bundle-version</key>
+					<string>4.2.2.49</string>
+					<key>kind</key>
+					<string>software</string>
+					<key>title</key>
+					<string>RDM</string>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</plist>
